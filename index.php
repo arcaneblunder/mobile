@@ -45,8 +45,8 @@
                             <div>
                                 <img src="https://placehold.co/600x400?text=Map+to+Location" alt="Placeholder Map" class="img-fluid">
                             </div>
-                            <span class="d-block mt-3"><button type="button" class="btn redbutton">Google Maps</button></span>
-                            <span class="d-block mt-3"><a href="directions.php" class="btn redbutton">Text Directions</a></span>
+                            <span class="d-block mt-3"><ons-button class="redbutton">Google Maps</ons-button></span>
+                            <span class="d-block mt-3"><ons-button class="redbutton">Text Directions</ons-button></span>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in sapien eget odio eleifend bibendum. Fusce ut malesuada mauris, at iaculis erat. Phasellus vitae sagittis tellus.
                             </p>
-                            <span class="d-block mt-3"><button type="button" class="btn redbutton">Read More</button></span>
+                            <span class="d-block mt-3"><ons-button class="redbutton">Read More</button></span>
                         </div>
                         <div class="col-md-6">
                             <img src="https://placehold.co/600x400?text=Image+of+Location" alt="Placeholder" class="img-fluid my-3">
