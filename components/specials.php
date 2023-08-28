@@ -21,12 +21,24 @@ echo <<<'EOL'
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://placehold.co/300x200" class="d-block w-100" alt="Placeholder">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://placehold.co/300x200" class="d-block w-100" alt="Placeholder">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://placehold.co/300x200" class="d-block w-100" alt="Placeholder">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

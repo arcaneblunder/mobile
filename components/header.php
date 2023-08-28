@@ -23,7 +23,7 @@
                     <span class="navbar-text d-block mt-2 pt-3 border-top border-light">
                         Subtotal: $Placeholder
                         <span class="d-block">
-                            <a class="nav-link" href="#">Icon - Checkout</a>
+                            <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i> - Checkout</a>
                         </span>
                     </span>
                 </ul>
