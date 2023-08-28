@@ -5,7 +5,7 @@ echo <<<'EOL'
         <h2 class="text-center red">Specials</h2>
         <div class="row justify-content-center">
             <div class="col-md-4">
-                <p class="text-center">
+                <p class="text-center mb-5">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut blandit ante, eget ultricies erat.
                 </p>
             </div>
