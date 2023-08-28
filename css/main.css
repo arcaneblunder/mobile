@@ -23,6 +23,12 @@ body {
     color: #fff !important;
     text-decoration: underline;
 }
+.navbar-text {
+    color: #fff;
+}
+.navbar-text a {
+    color: #fff;
+}
 .shader {
     background: rgba(0, 0, 0, .6);
 }

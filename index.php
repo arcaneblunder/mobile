@@ -8,10 +8,10 @@
                 <div class="shader py-5">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-6 text-center">
+                            <div class="col-sm-6 my-2 text-center">
                                 <button type="button" class="btn redbutton" href="#">Begin Order</button>
                             </div>
-                            <div class="col-6 text-center">
+                            <div class="col-sm-6 my-2 text-center">
                                 <button type="button" class="btn redbutton" href="#">Reservations</button>
                             </div>
                         </div>
@@ -23,12 +23,12 @@
                 <div class="container">
                     <h2 class="text-center">Our Menus</h2>
                     <div class="row mt-4">
-                        <div class="col-6 text-center">
+                        <div class="col-sm-6 my-2 text-center">
                             <div class="btn">
                                 <button type="button" class="btn blackbutton" href="#">Pizza and Pasta</a>
                             </div>
                         </div>
-                        <div class="col-6 text-center">
+                        <div class="col-sm-6 my-2 text-center">
                             <div class="btn">
                                 <button type="button" class="btn blackbutton" href="#">Wine and Drinks</a>
                             </div>
@@ -45,6 +45,7 @@
                                 <img src="https://placehold.co/600x400?text=Map+to+Location" alt="Placeholder Map" class="img-fluid">
                             </div>
                             <span class="d-block mt-3"><button type="button" class="btn redbutton">Google Maps</button></span>
+                            <span class="d-block mt-3"><a href="directions.php" class="btn redbutton">Text Directions</a></span>
                         </div>
                     </div>
                 </div>

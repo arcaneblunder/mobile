@@ -1,4 +1,4 @@
-<?php echo <<<EOL
+<?php echo <<<'EOL'
 <header class="main-header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -20,9 +20,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About</a>
                     </li>
-                    <li>
-                        <a class="nav-link" href="#">Checkout</a>
-                    </li>
+                    <span class="navbar-text d-block mt-2 pt-3 border-top border-light">
+                        Subtotal: $Placeholder
+                        <span class="d-block">
+                            <a class="nav-link" href="#">Icon - Checkout</a>
+                        </span>
+                    </span>
                 </ul>
             </div>
         </div>
