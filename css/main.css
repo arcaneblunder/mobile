@@ -1,4 +1,73 @@
-html {
-    background-color: dodgerblue;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quattrocento', Palatino, Garamond, Bookman, Times, 'Times New Roman', serif;
+    font-weight: 700;
+}
+body {
+    font-family: 'Alice', Palatino, Garamond, Bookman, Times, 'Times New Roman', serif;
+}
+
+
+
+
+.main-header {
+    background-color: #B92121;
+    color: #fff;
+}
+.navbar-toggler {
+    background-color: #fff;
+}
+.nav-link {
+    color: #fff;
+}
+.nav-link.active {
+    color: #fff !important;
+    text-decoration: underline;
+}
+.shader {
+    background: rgba(0, 0, 0, .6);
+}
+.redbutton {
+    background-color: #B92121;
+    color: #fff;
+    border-radius: 6px;
+}
+.blackbutton {
+    background-color: #111;
+    color: #fff;
+    border-radius: 6px;   
+}
+.hero {
+    background: url('images/pexels-narda-yescas-1566837.jpg') no-repeat;
+    background-size: cover;
+}
+
+h2.red {
+    color: #B92121;
+}
+h2.black {
+    color: #333;
+}
+
+.background-red {
+    background-color: #B92121;
+    color: #fff;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    background: rgba(0, 0, 0, .6);
+}
+
+#menu {
+    background-color: #B92121;
+    color: #fff;
+}
+#about {
+    background-color: #f5f4f4;
+}
+footer#main {
+    background-color: #111;
+    color: #fff;
+}
+footer#main a {
     color: #fff;
 }
