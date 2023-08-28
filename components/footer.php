@@ -3,10 +3,10 @@ echo <<<EOL
 <footer id="main" class="py-3">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 my-2">
                 Phone: <a href="tel:15555555555">555-555-5555</a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 my-2 text-right">
                 Copyright Website
             </div>
         </div>

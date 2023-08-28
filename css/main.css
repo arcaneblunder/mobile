@@ -7,7 +7,9 @@ body {
 }
 
 
-
+body {
+    overflow: auto;
+}
 
 .main-header {
     background-color: #B92121;

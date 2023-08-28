@@ -22,7 +22,7 @@
             <section id="menu" class="pt-5 pb-3">
                 <div class="container">
                     <h2 class="text-center">Our Menus</h2>
-                    <p class="lead text-center">Download Our Mobile Menus</p>
+                    <p class="text-center">Download Our Mobile Menus</p>
                     <div class="row mt-4">
                         <div class="col-sm-6 my-2 text-center">
                             <div class="btn">
