@@ -78,3 +78,36 @@ footer#main {
 footer#main a {
     color: #fff;
 }
+
+.page__content {
+    background-color: #FAFAFA !important;
+    color: #333;
+
+}
+#menutable_info {
+    margin-top: 24px;
+}
+#menutable_wrapper {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    background: rgba(125, 125, 125, .3);
+}
+
+table.dataTable tbody tr {
+    border-color: rgba(255, 255, 255, .7);
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-collapse:initial;
+
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 12px 10px;
+}
+.quantity {
+    max-width: 40px;
+    text-align: center;
+    border: 1px solid black;
+}

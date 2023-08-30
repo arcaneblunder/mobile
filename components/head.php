@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Quattrocento:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 EOL
