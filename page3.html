@@ -1,15 +1,79 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
-        <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-        <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <main>
-            <form action="index.html" method="post">
-                <button type="submit">Index</button>
-            </form> Test
-        </main>
-    </body>
-</html>
+<html><head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body data-device-back-button-handler-id="1" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+    <ons-page class="page" shown=""><ons-toolbar class="toolbar"><div class="center toolbar__center toolbar__title">Menu</div></ons-toolbar><div class="page__background"></div><div class="page__content">
+        
+
+        <p style="text-align: center">
+            <ons-button id="menubutton" onclick="showModal()" class="button">Menu<button hidden=""></button></ons-button>
+        </p>
+    </div></ons-page>
+
+    <ons-modal direction="up" id="mymodal" class="modal" style="display: none; z-index: 10001;" data-device-back-button-handler-id="0"><div class="modal__content">
+        <div style="text-align: center">
+            <ons-page class="page"><div class="page__background"></div><div class="page__content">
+                <ons-button onclick="showTemplateDialog()" class="button">Menu<button hidden=""></button></ons-button>
+                <table id="menutable">
+                    <tbody>
+                        <tr id="menu_1"><td>Lasagna</td><td>My image</td></tr>
+                        <tr><td>What a great dish!</td></tr>
+                        <tr id="menu_2"><td>Spagetti</td><td>My image2</td></tr>
+                        <tr><td>What a great dish!</td></tr>
+                        <tr id="menu_3"><td>Chicken Fetuccini</td><td>My image3</td></tr>
+                        <tr><td>What a great dish!</td></tr>                                
+                    </tbody>
+                </table>
+                <ons-button onclick="hideModal()" class="button">Cancel<button hidden=""></button></ons-button>
+                <ons-button onclick="hideModal()" class="button">Order<button hidden=""></button></ons-button>
+            </div></ons-page>
+
+            <template id="dialog.html">
+                <ons-dialog id="my-dialog">
+                    <div style="text-align: left; padding: 10px;">
+
+                    </div>
+                </ons-dialog>
+            </template>
+        </div>
+    </div></ons-modal>
+    <script>
+        function showModal() {
+            var modal = document.querySelector('ons-modal');
+            modal.show();
+           /* setTimeout(function () {
+                modal.hide();
+            }, 2000);*/
+        };
+        function hideModal() {
+            //var modal = document.querySelector('ons-modal');
+            $("#mymodal").hide();
+            $("#menubutton").show();
+        }
+        var showTemplateDialog = function () {
+            var dialog = document.getElementById('my-dialog');
+            $("#menubutton").hide();
+            if (dialog) {
+                dialog.show();
+            } else {
+                ons.createElement('dialog.html', { append: true })
+                    .then(function (dialog) {
+                        dialog.show();
+                    });
+            }
+        };
+
+        var hideDialog = function (id) {
+            document
+                .getElementById(id)
+                .hide();
+        };
+    </script>
+
+
+</body></html>
