@@ -39,10 +39,10 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
+                                                    <tr class="menu-item">
                                                         <td>
+                                                            <!--<ons-button onclick="showProductDialogue()">+</ons-button>-->
                                                             <H5>Lasagna</h5>
-                                                            <ons-button onclick="showProductDialogue()">Add to Cart</ons-button>
                                                         </td>
                                                         <td>
                                                             <img src="https://placehold.co/600x400" alt="Placeholder Image" class="d-block img-fluid ms-auto" style="max-width: 150px;">
@@ -54,20 +54,18 @@
                                                 </tbody>
                                             </table>
                                             <ons-button onclick="hideModal()" class="button redbutton">Cancel<button hidden=""></button></ons-button>
-                                            <ons-button onclick="hideModal()" class="button redbutton">Order<button hidden=""></button></ons-button>
+                                            
                                         </div>
                                     </ons-page>
                                     <template id="dialog.html">
                                         <ons-dialog id="my-dialog">
                                             <div style="text-align: center; padding: 10px;">
                                                 <p>
-                                                    This is a simple dialog!
+                                                    <ons-input class="quantity" value="1" name="quantity" disabled></ons-input> <ons-button onclick="increaseItem()">+</ons-button> <ons-button onclick="decreaseItem()">-</ons-button>
                                                 </p>
                                                 <p>
-                                                    <ons-input class="quantity" placeholder="1" name="quantity"></ons-input> <ons-button onclick="addCartItem('quantity')">Add to Cart</ons-button>
-                                                </p>
-                                                <p>
-                                                    <ons-button onclick="hideDialog('my-dialog')">Close</ons-button>
+                                                    <ons-button onclick="hideDialog('my-dialog')">Cancel</ons-button>
+                                                    <ons-button onclick="checkOut()">Add</ons-button>
                                                 </p>
                                             </div>
                                         </ons-dialog>
@@ -111,6 +109,8 @@
         </main>
         <?php require ('components/footer.php'); ?>
         <script>
+        let row = '';
+
         function showModal() {
             var modal = document.querySelector('ons-modal');
             modal.show();
@@ -123,8 +123,34 @@
             $("#mymodal").hide();
             $("#menubutton").show();
         };
-        function addCartItem () {
-            alert('testing');
+        function increaseItem () {
+            $('.quantity').val( function(i, oldval) {
+                return ++oldval;
+            });
+        };
+        function decreaseItem () {
+            $('.quantity').val( function(i, oldval) {
+                --oldval;
+                if (oldval < 0 ) {
+                    oldval = 0;
+                } 
+                return oldval;
+            });
+            
+        };
+
+
+        function onload() {
+            $(".menu-item").on("click", function() {
+                row = $(this).closest("tr").index();
+            });
+        }
+
+        function checkOut() {
+
+            
+
+            location.href = 'order.php';
         };
         var showProductDialogue = function() {
             var dialog = document.getElementById('my-dialog');
@@ -144,19 +170,33 @@
                 .getElementById(id)
                 .hide();
         };
+
+
+        // costs
+        const TAXRATE = .08;
+
+        let subtotal = 0;
+
+        let taxed = TAXRATE * subtotal;
+
+
     </script>
     <script>
         $(document).ready(function() {
-    $('#menutable').DataTable( {
-        
-            "ordering": true,
-            columnDefs: [
-    { 
-     orderable: false, targets:  "no-sort"}
-    ]
-        
-    });
-} );
+            itemArray = [
+                ["Fettuccini", 12.99, 0],
+                ["Spaghetti", 11.99, 0],
+                ["Lasagna", 19.99, 0]
+            ],
+            $('#menutable').DataTable( { 
+                "ordering": true,
+                columnDefs: [
+                    { 
+                        orderable: false, targets:  "no-sort"
+                    }
+                ] 
+            });
+        } );
     </script>
     </body>
 </html>
