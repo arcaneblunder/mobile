@@ -54,7 +54,6 @@
                                                 </tbody>
                                             </table>
                                             <ons-button onclick="hideModal()" class="button redbutton">Cancel<button hidden=""></button></ons-button>
-                                            
                                         </div>
                                     </ons-page>
                                     <template id="dialog.html">
