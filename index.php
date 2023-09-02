@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"> Test
     <?php require ('components/head.php'); ?>
     <body>
         <?php require ('components/header.php'); ?>
