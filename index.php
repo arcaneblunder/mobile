@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">New Testing
+<html lang="en">
     <?php require ('components/head.php'); ?>
     <body>
         <?php require ('components/header.php'); ?>
@@ -39,6 +39,30 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
+                                                <tr class="menu-item">
+                                                        <td>
+                                                            <!--<ons-button onclick="showProductDialogue()">+</ons-button>-->
+                                                            <H5>Fettuccini</h5>
+                                                        </td>
+                                                        <td>
+                                                            <img src="https://placehold.co/600x400" alt="Placeholder Image" class="d-block img-fluid ms-auto" style="max-width: 150px;">
+                                                        </td>
+                                                        <td>
+                                                            $12.99
+                                                        </td>
+                                                    </tr>                                          
+                                                    <tr class="menu-item">
+                                                        <td>
+                                                            <!--<ons-button onclick="showProductDialogue()">+</ons-button>-->
+                                                            <H5>Spaghetti</h5>
+                                                        </td>
+                                                        <td>
+                                                            <img src="https://placehold.co/600x400" alt="Placeholder Image" class="d-block img-fluid ms-auto" style="max-width: 150px;">
+                                                        </td>
+                                                        <td>
+                                                            $11.99
+                                                        </td>
+                                                    </tr>                                          
                                                     <tr class="menu-item">
                                                         <td>
                                                             <!--<ons-button onclick="showProductDialogue()">+</ons-button>-->
@@ -139,17 +163,20 @@
         };
 
 
-        function onload() {
-            $(".menu-item").on("click", function() {
+        
+            $(".menu-item").on("click", function(event) {
                 row = $(this).closest("tr").index();
+                showProductDialogue();
             });
-        }
+        
 
         function checkOut() {
 
-            
 
-            location.href = 'order.php';
+            itemArray[row][2] = $(".quantity").val();
+            alert(itemArray);
+            hideDialog('my-dialog');
+            //location.href = 'order.php';
         };
         var showProductDialogue = function() {
             var dialog = document.getElementById('my-dialog');
