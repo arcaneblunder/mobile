@@ -191,12 +191,16 @@
 						strTable += subtotals[i][j];
 						strTable += "</div>";
 						
-						// running subtotal added here
+
 						
 					}
 					strTable += "</div>";
+                    // running subtotal added here
 					subtotal += parseFloat(subtotals[i][3]);
 				}
+
+
+                
 
 			}
 			
@@ -223,6 +227,12 @@
 		
         function hideModal() {
             //var modal = document.querySelector('ons-modal');
+            itemArray = [
+                ["Fettuccini", 12.99, 0],
+                ["Spaghetti", 11.99, 0],
+                ["Lasagna", 19.99, 0]
+            ];
+
             $("#mymodal").hide();
             
         };
@@ -231,6 +241,7 @@
             $("#order-model").hide();
             
         };
+
         function increaseItem () {
             if ($.isNumeric($('.quantity').val())) {
                 $('.quantity').val( function(i, oldval) {
@@ -238,6 +249,7 @@
                 });
             }
         };
+
         function decreaseItem () {
             $('.quantity').val( function(i, oldval) {
                 --oldval;
@@ -262,16 +274,20 @@
 
         function addToOrder() {
 			hideDialog('my-dialog');
-			if ($(".quantity").val() > 0) {
-			
+
+			if ($(".quantity").val() >= 0) {
+                
+                
 				
 				itemArray[row][2] = $(".quantity").val();
 
+                //let timer;
+                //clearTimeout(timer);
+                // https://jsfiddle.net/loktar/3nMEB/1/
+                //timer = setTimeout(function(){$(".quantity").val(1)},500);
 				//location.href = 'order.php';
 			}
 
-					
-			
         };
 
         var showProductDialogue = function() {
