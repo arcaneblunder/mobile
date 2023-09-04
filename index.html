@@ -1,8 +1,54 @@
 <!doctype html>
 <html lang="en">
-    <?php require ('components/head.php'); ?>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Italian Restaruant</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Quattrocento:wght@700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
     <body>
-        <?php require ('components/header.php'); ?>
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img href="#" src="https://placehold.co/170x60/red/white?text=Logo+Here" class="brand"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="directions.php">Directions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About</a>
+                    </li>
+                    <span class="navbar-text d-block mt-2 pt-3 border-top border-light">
+                        Subtotal: $Placeholder
+                        <span class="d-block">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i> - Checkout</a>
+                        </span>
+                    </span>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
         <main>
             <div class="hero">
                 <div class="shader py-5">
@@ -18,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <?php include ('components/specials.php'); ?>
+
             <section id="menu" class="pt-5 pb-3">
                 <div class="container">
                     <h2 class="text-center">Our Menus</h2>
@@ -77,20 +123,18 @@
                                                     </tr>                                          
                                                 </tbody>
                                             </table>
-                                            <ons-button onclick="hideModal()" class="button redbutton">Cancel<button hidden=""></button></ons-button>
 											<ons-button onclick="showOrderModal()" class="button redbutton">Order<button hidden=""></button></ons-button>
+                                            <ons-button onclick="hideModal()" class="button redbutton">Cancel<button hidden=""></button></ons-button>
                                         </div>
                                     </ons-page>
                                     <template id="dialog.html">
                                         <ons-dialog id="my-dialog">
                                             <div class="pt-3 text-center">
                                                 <p>
-                                                    <ons-input class="quantity" value="1" name="quantity" disabled></ons-input>
-                                                    <ons-button onclick="increaseItem()" class="btn-inc">+</ons-button>
-                                                    <ons-button onclick="decreaseItem()" class="btn-dec">-</ons-button>
+                                                    <ons-input class="quantity" value="1" name="quantity" disabled></ons-input> <ons-button onclick="increaseItem()">+</ons-button> <ons-button onclick="decreaseItem()">-</ons-button>
                                                 </p>
                                                 <p>
-                                                    <ons-button onclick="hideDialog('my-dialog')" class="me-3">Cancel</ons-button>
+                                                    <ons-button onclick="hideDialog('my-dialog')">Cancel</ons-button>
                                                     <ons-button onclick="addToOrder()">Add</ons-button>
                                                 </p>
                                             </div>
@@ -108,9 +152,9 @@
 											<h2>Your Order</h2>
 											<div id="my-order"></div>
 											<div class="text-end totals">
-												<div>Subtotal: <span class="subtotal"></span></div>
-												<div>Tax: <span class="tax"></span></div>
-												<div>Total: <span class="total"></span></div>
+												<div class="subtotal"></div>
+												<div class="tax"></div>
+												<div class="total"></div>
 											</div>
 											</p>
                                             <ons-button onclick="hideOrderModal()" class="button redbutton">Cancel<button hidden=""></button></ons-button>
@@ -154,8 +198,19 @@
                 </div>
             </section>
         </main>
-        <?php require ('components/footer.php'); ?>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<footer id="main" class="py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 my-2">
+                Phone: <a href="tel:15555555555">555-555-5555</a>
+            </div>
+            <div class="col-md-6 my-2 text-right">
+                Copyright Website
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
         <script>
         let row = '';

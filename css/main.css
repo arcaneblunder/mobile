@@ -110,4 +110,36 @@ table.dataTable tbody th, table.dataTable tbody td {
     max-width: 40px;
     text-align: center;
     border: 1px solid black;
+    opacity: 1 !important;
+    text-align: center;
+}
+.quantity .text-input:disabled {
+    opacity: 1;
+    text-align: center;
+}
+.btn-inc, .btn-dec {
+    width: 40px;
+    text-align: center;
+    margin: 3px 5px;
+}
+
+/* Modal Ordering */
+
+
+.ordered-item {
+	display: flex;
+	flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+.ordered-item div {
+	flex-basis: calc(50% - 24px);
+	padding: 12px;
+	margin: 12px;
+    background-color: #eee;
+}
+.totals {
+	padding-right: 15px;
+}
+.totals div {
+	margin: 12px;
 }
