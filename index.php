@@ -239,7 +239,7 @@
         function hideOrderModal() {
             //var modal = document.querySelector('ons-modal');
             $("#order-model").hide();
-            
+            $('.redbutton').show();
         };
 
         function increaseItem () {
@@ -267,6 +267,7 @@
         $(".menu-item").on("click", function(event) {
             row = $(this).closest("tr").index();
             showProductDialogue();
+            $('.redbutton').hide();
         });
         
 		let orderArray = [];
@@ -310,6 +311,7 @@
             document
                 .getElementById(id)
                 .hide();
+                $('.redbutton').show();
         };
 
 
