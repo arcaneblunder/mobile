@@ -208,7 +208,7 @@
 			
 			tax = parseFloat(tax);
 			subtotal = parseFloat(subtotal);
-			
+			subtotal = subtotal.toFixed(2);
 			tax = tax.toFixed(2);
 			
 			let total = parseFloat(tax) + parseFloat(subtotal);
